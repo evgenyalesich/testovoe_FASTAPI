@@ -2,7 +2,7 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Table
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from .db import Base
+from app.db import Base
 
 # Ассоциация для связи заметок и тегов
 note_tags = Table(

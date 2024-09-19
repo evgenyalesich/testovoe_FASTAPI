@@ -1,7 +1,7 @@
 # app/crud.py
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-from . import models, schemas
+from app import models, schemas
 from fastapi import HTTPException
 
 # Получение заметки по ID

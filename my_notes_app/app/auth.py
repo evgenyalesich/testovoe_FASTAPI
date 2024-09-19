@@ -4,9 +4,9 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from sqlalchemy.ext.asyncio import AsyncSession
-from . import models, crud
-from .db import get_db
-from .config import settings
+from app import models, crud
+from app.db import get_db
+from app.config import settings
 from passlib.context import CryptContext
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
