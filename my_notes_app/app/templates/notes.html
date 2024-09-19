@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Notes List{% endblock %}
+
+{% block content %}
+    <h2>Your Notes</h2>
+    <ul>
+        {% for note in notes %}
+        <li><a href="/notes/{{ note.id }}">{{ note.title }}</a> - Tags: {{ ', '.join(note.tags) }}</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <form action="/notes/search" method="get">
+        <label for="tags">Search by tags (comma separated):</label>
+        <input type="text" id="tags" name="tags">
+        <button type="submit">Search</button>
+    </form>
+{% endblock %}

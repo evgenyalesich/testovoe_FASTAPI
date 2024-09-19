@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Note Detail{% endblock %}
+
+{% block content %}
+    <h2>{{ note.title }}</h2>
+    <p>{{ note.content }}</p>
+    <p><strong>Tags:</strong> {{ ', '.join(note.tags) }}</p>
+    <p><strong>Created:</strong> {{ note.created_at }}</p>
+    <p><strong>Updated:</strong> {{ note.updated_at }}</p>
+    <a href="/notes">Back to list</a>
+{% endblock %}
