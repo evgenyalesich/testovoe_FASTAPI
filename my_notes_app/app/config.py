@@ -1,11 +1,12 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    DB_USER: str
-    DB_PASSWORD: str
-    DB_HOST: str = "localhost"  # Default to localhost
-    DB_PORT: int = 5432          # Default PostgreSQL port
-    DB_NAME: str
+    DB_USER: str = "DB_USER"
+    DB_PASSWORD: str = "DB_PASSWORD"
+ 
+    DB_HOST: str = "DB_HOST"   # Default to localhost
+    DB_PORT: int = "DB_PORT"         # Default PostgreSQL port
+    DB_NAME: str = "DB_NAME"
 
     class Config:
         env_file = ".env"  # Load from .env file
