@@ -19,4 +19,3 @@ if __name__ == "__main__":
     finally:
         # Остановка и удаление контейнера после завершения работы
         stop_postgres_container()
-
